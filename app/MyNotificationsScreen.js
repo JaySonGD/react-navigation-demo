@@ -24,7 +24,12 @@ export default class MyNotificationsScreen extends Component<{}> {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.welcome}>
+                <Text style={styles.welcome}
+                      onPress={()=>{
+                          console.log(this.props.navigation.navigate)
+                          this.props.navigation.navigate('Chat1', { user: 'Lucy1' })
+                      }}
+                >
                     Welcome to MyNotificationsScreen!
                 </Text>
 

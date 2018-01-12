@@ -1,5 +1,11 @@
 /**
- * Created by ward on 2018/1/11.
+ * Created by ward on 2018/1/12.
+ */
+/**
+ * Created by ward on 2018/1/12.
+ */
+/**
+ * Created by ward on 2018/1/12.
  */
 /**
  * Created by ward on 2018/1/11.
@@ -20,25 +26,24 @@ import {
 
 
 
-
-
-export default class MyHomeScreen extends Component<{}> {
+export default class ChatScreen2 extends Component<{}> {
 
     static navigationOptions = ({ navigation }) => ({
 
-        title: 'zhibo2',
-        headerRight:(<Text>我的2</Text>),
-        headerLeft:(<Text onPress={()=>{
-            console.log(navigation)
-           navigation.navigate('Chat', { user: 'Lucy' })
-        }}>点我2</Text>),
+        title: '聊天2',
+        headerRight:(<Text>聊天22</Text>),
+
     })
 
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Welcome to MyHomeScreen!
+                <Text style={styles.welcome}
+                      onPress={()=>{
+                          this.props.navigation.navigate('Chat3', { user: 'Lucy3' })
+                      }}
+                >
+                    Welcome to ChatScreen2!
                 </Text>
 
             </View>
@@ -51,7 +56,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'red',
+        backgroundColor: 'orange',
     },
     welcome: {
         fontSize: 20,
